@@ -1,28 +1,60 @@
-# Angular specific
+# =========================
+# Angular
+# =========================
 /dist/
 /out-tsc/
 /tmp/
 /coverage/
 /e2e/test-output/
 /.angular/
-.angular/
+/.ng/
+.angular-cli.json
+*.tsbuildinfo
 
-# Node modules and dependency files
+# =========================
+# Node
+# =========================
 /node_modules/
 /package-lock.json
 /yarn.lock
 
-# Environment files
-/.env
-
-# Angular CLI and build artefacts
-/.angular-cli.json
-/.ng/
-
-# TypeScript cache
-*.tsbuildinfo
-
+# =========================
 # Logs
+# =========================
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+*.log
+
+# =========================
+# .NET
+# =========================
+bin/
+obj/
+.vscode/
+.idea/
+
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# =========================
+# EF Core / SQLite
+# =========================
+*.db
+*.db-shm
+*.db-wal
+
+# =========================
+# Config / Secrets
+# =========================
+.env
+secrets.json
+appsettings.Development.json
+
+# =========================
+# OS junk
+# =========================
+.DS_Store
+Thumbs.db
