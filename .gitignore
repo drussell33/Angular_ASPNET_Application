@@ -100,3 +100,5 @@ Migrations/
 # Environment files (already have .env, but be explicit)
 .env.local
 .env.*.local
+
+*.db
