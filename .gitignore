@@ -58,3 +58,45 @@ appsettings.Development.json
 # =========================
 .DS_Store
 Thumbs.db
+
+# Visual Studio / Rider
+.vs/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# NuGet
+*.nupkg
+*.snupkg
+
+# Local nuget folder
+nuget/
+
+# ReSharper / Rider
+.idea/
+.idea_modules/
+*.sln.iml
+
+# Test Results
+TestResults/
+
+# Entity Framework migrations (if applicable)
+Migrations/
+
+# Mac OS
+.AppleDouble
+.LSOverride
+
+# Windows
+*.lnk
+
+# npm cache
+.npm/
+
+# Yarn cache
+.yarn/cache/
+.yarn/install-state.gz
+
+# Environment files (already have .env, but be explicit)
+.env.local
+.env.*.local
