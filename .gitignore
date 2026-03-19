@@ -102,3 +102,4 @@ Migrations/
 .env.*.local
 
 *.db
+DatingApp/client/package-lock.json
