@@ -107,3 +107,6 @@ Migrations/
 DatingApp/client/package-lock.json
 
 DatingApp/API/appsettings.json
+
+client/ssl/
+*.pem
