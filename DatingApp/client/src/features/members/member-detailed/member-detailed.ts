@@ -20,9 +20,16 @@ export class MemberDetailed implements OnInit {
   protected presenceService = inject(PresenceService);
   private router = inject(Router);
   protected title = signal<string | undefined>('Profile');
+  private routeId = signal<string | null>(null);
   protected isCurrentUser = computed(() => {
-    return this.accountService.currentUser()?.id === this.route.snapshot.paramMap.get('id');
+    return this.accountService.currentUser()?.id === this.routeId()
   })
+
+  constructor() {
+    this.route.paramMap.subscribe(params => {
+      this.routeId.set(params.get('id'));
+    })
+  }
 
   ngOnInit(): void {
     this.title.set(this.route.firstChild?.snapshot?.title)
