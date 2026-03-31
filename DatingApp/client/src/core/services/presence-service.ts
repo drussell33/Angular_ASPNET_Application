@@ -4,6 +4,7 @@ import { ToastService } from './toast-service';
 import { User } from '../../types/user';
 import { HubConnection, HubConnectionBuilder, HubConnectionState } from '@microsoft/signalr';
 import { email } from '@angular/forms/signals';
+import { Message } from '../../types/message';
 
 @Injectable({
   providedIn: 'root',
@@ -35,6 +36,11 @@ export class PresenceService {
 
       this.hubConnection.on('GetOnlineUsers', userIds => {
         this.onlineUsers.set(userIds);
+      });
+
+      this.hubConnection.on('NewMessageReceived', (message: Message) => {
+        this.toast.info(message.senderDisplayName + ' has sent you a new message', 
+          10000, message.senderImageUrl, `/members/${message.senderId}/messages`);
       });
   }
 
