@@ -19,6 +19,8 @@ public class AppDbContext(DbContextOptions options) : IdentityDbContext<AppUser>
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
+        
+        modelBuilder.Entity<Photo>().HasQueryFilter(x => x.IsApproved);
 
         modelBuilder.Entity<IdentityRole>()
             .HasData(
